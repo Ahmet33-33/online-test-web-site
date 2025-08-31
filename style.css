@@ -1,0 +1,473 @@
+.clickable-image {
+    cursor: zoom-in;
+    transition: box-shadow 0.2s;
+}
+.clickable-image:hover {
+    box-shadow: 0 0 8px #2563eb55;
+}
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.image-modal-content {
+    position: relative;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-modal-content img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.12);
+}
+.image-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    font-size: 2.2rem;
+    color: #2563eb;
+    cursor: pointer;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px 10px;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+.image-modal-close:hover {
+    background: #2563eb;
+    color: #fff;
+}
+.custom-file-label span {
+    opacity: 1 !important;
+    transition: none !important;
+}
+#register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f9f9f9;
+}
+.register-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(37,99,235,0.10);
+    padding: 36px 32px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register-logo {
+    width: 220px;
+    margin-bottom: 18px;
+}
+#register-form input, #register-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #b3c6f7;
+    font-size: 1rem;
+    background: #f4f6fa;
+}
+.register-btn {
+    background: #e65100;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(230,81,0,0.07);
+    transition: background 0.2s;
+}
+.register-btn:hover {
+    background: #bf360c;
+}
+.login-btn {
+    background: #fff;
+    color: #e65100;
+    border: 2px solid #e65100;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.login-btn:hover {
+    background: #e65100;
+    color: #fff;
+}
+.custom-file-label {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    border: 2px solid #1741a6;
+    transition: background 0.2s, border 0.2s;
+}
+.custom-file-label:hover {
+    background: #1741a6;
+    border: 2px solid #2563eb;
+}
+.question-upload span {
+    font-weight: 600;
+    color: #2563eb;
+    margin-right: 6px;
+}
+#questions-upload .question-upload {
+    margin-bottom: 18px;
+    padding: 14px 10px;
+    background: #f1f5fb;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+}
+.question-image-input {
+    margin-top: 8px;
+}
+.question-image-preview {
+    display: block;
+    margin: 8px auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+    max-width: 120px;
+    max-height: 120px;
+}
+/* Form ve yeni bölümler */
+#register-section, #login-section, #test-upload-section, #contact-section {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+    text-align: center;
+}
+#register-form input, #login-form input, #test-upload-form input, #contact-form input, #contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+#test-upload-form textarea, #contact-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+#register-form button, #login-form button, #test-upload-form button, #contact-form button, #add-question-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#register-message, #login-message, #upload-message, #contact-message-result {
+    margin-top: 15px;
+    color: #007bff;
+    font-weight: bold;
+}
+/* Ana sayfa kutuları ve hoş geldiniz */
+#home-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+.test-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.test-card {
+    background: #f4f6fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 28px 32px;
+    width: 220px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.test-card:hover {
+    background: #e6e6e6;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9f9f9 100%);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #2563eb;
+    color: #fff;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 32px;
+    letter-spacing: 1px;
+}
+nav {
+    margin-right: 32px;
+}
+nav button {
+    background: #fff;
+    color: #2563eb;
+    border: none;
+    padding: 10px 22px;
+    margin-left: 8px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+nav button:hover {
+    background: #2563eb;
+    color: #fff;
+}
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 36px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+}
+h1, h2 {
+    text-align: center;
+    color: #2563eb;
+    font-weight: 600;
+}
+.question {
+    margin-bottom: 22px;
+    background: #f1f5fb;
+    padding: 18px 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+}
+.options label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(37,99,235,0.03);
+    transition: background 0.2s;
+}
+.options label:hover {
+    background: #e3f0ff;
+}
+#submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    transition: background 0.2s;
+}
+#submit-btn:disabled {
+    background: #b3c6f7;
+    cursor: not-allowed;
+}
+#result-container {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 20px;
+    color: #2563eb;
+    font-weight: 600;
+}
+#test-list-section {
+    margin-bottom: 30px;
+}
+#test-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#test-list li {
+    background: #f1f5fb;
+    padding: 18px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+    transition: background 0.2s;
+}
+#test-list li:hover {
+    background: #e3f0ff;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #e3f0ff;
+    color: #2563eb;
+    margin-top: 40px;
+    border-top: 1px solid #b3c6f7;
+    font-weight: 500;
+}
+/* Ana sayfa kutuları ve hoş geldiniz */
+#home-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.test-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.test-card {
+    background: linear-gradient(135deg, #e3f0ff 0%, #f1f5fb 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    padding: 32px 36px;
+    width: 220px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b3c6f7;
+}
+.test-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.test-card p {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
+.test-card:hover {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+    transform: translateY(-4px) scale(1.04);
+}
+.test-card:hover h3, .test-card:hover p {
+    color: #fff;
+}
+/* Form ve yeni bölümler */
+#register-section, #login-section, #test-upload-section, #contact-section {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+    text-align: center;
+}
+#register-form input, #login-form input, #test-upload-form input, #contact-form input, #contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #b3c6f7;
+    font-size: 1rem;
+}
+#test-upload-form textarea, #contact-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+#register-form button, #login-form button, #test-upload-form button, #contact-form button, #add-question-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+    transition: background 0.2s;
+}
+#register-form button:hover, #login-form button:hover, #test-upload-form button:hover, #contact-form button:hover, #add-question-btn:hover {
+    background: #1741a6;
+}
+#register-message, #login-message, #upload-message, #contact-message-result {
+    margin-top: 15px;
+    color: #2563eb;
+    font-weight: bold;
+}
+.copy-link-btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+.copy-link-btn:hover {
+    background: #1565c0;
+}
